@@ -1,0 +1,72 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root{
+  height: 100vh;
+  background-color: salmon;
+}
+h1{
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.carousel{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: salmon;
+  height: 100%;
+  width: 60%;
+  margin: auto;
+}
+.slide{
+  width: 80%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+  
+}
+.slide img{
+  width: 100%;
+}
+i{
+  position: absolute;
+  font-size: 50px;
+  cursor: pointer;
+}
+i.left{
+  left: 0;
+}
+i.right{
+  right: 0
+}
+i.play, i.pause{
+  position: static;
+  margin-top: 20px;
+}
+
+.slide-picker{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+  padding: 10px 15px;
+  border-radius: 999px;
+  margin-top: 20px;
+}
+.circle{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.circle:last-child{
+  margin-right: 0px;
+}
+.circle.active{
+  background-color: black;
+}
