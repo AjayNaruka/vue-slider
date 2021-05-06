@@ -7,6 +7,7 @@ const app = new Vue({
     activeSlide:0,
     images:['assets/img/img1.jpg','assets/img/img2.jpg','assets/img/img3.jpg','assets/img/img4.jpg']
   },
+  
   methods:{
     nextSlide(){
       this.activeSlide++;
@@ -18,14 +19,16 @@ const app = new Vue({
     },
     autoPlay(){
       this.autoPlayIndicator=true
-      play = setInterval(this.nextSlide,3000)
+      this.play = setInterval(this.nextSlide,3000)
     },
     autoPlayPause(){
-      clearInterval(play);
+      clearInterval(this.play);
       console.log('PAUSE');
       this.autoPlayIndicator=false
-    }
+    },
+    
   },
 
-
+  
 })
+
