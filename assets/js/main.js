@@ -7,7 +7,9 @@ const app = new Vue({
     activeSlide:0,
     images:['assets/img/img1.jpg','assets/img/img2.jpg','assets/img/img3.jpg','assets/img/img4.jpg']
   },
-  
+  mounted(){
+    this.autoPlay()
+  },
   methods:{
     nextSlide(){
       this.activeSlide++;
